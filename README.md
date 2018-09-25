@@ -7,7 +7,7 @@ Package license: MPL 1.1
 
 Feedstock license: BSD 3-Clause
 
-Summary: cChardet is high speed universal character encoding detector.
+Summary: cChardet is high speed universal character encoding detector
 
 
 
