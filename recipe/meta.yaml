@@ -1,4 +1,4 @@
-{% set version = "2.1.1" %}
+{% set version = "2.1.4" %}
 
 package:
   name: cchardet
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cchardet/cchardet-{{ version }}.tar.gz
-  sha256: 9c9269208b9f8d7446dbd970f6544ce48104096efab0f769ee5918066ba1ee7e
+  sha256: cc9745e0400da4cfb49f075e7819f22473b66443f953427058fee2c7b9547cc0
 
 build:
   number: 0
