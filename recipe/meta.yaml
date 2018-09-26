@@ -1,29 +1,24 @@
-{% set name = "cchardet" %}
 {% set version = "2.1.1" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "9c9269208b9f8d7446dbd970f6544ce48104096efab0f769ee5918066ba1ee7e" %}
-{% set build = 0 %}
 
 package:
-  name: {{ name|lower }}
+  name: cchardet
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/c/cchardet/cchardet-{{ version }}.tar.gz
+  sha256: 9c9269208b9f8d7446dbd970f6544ce48104096efab0f769ee5918066ba1ee7e
 
 build:
-  number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
-    - setuptools
-    - toolchain
-
+    - pip
   run:
     - python
 
@@ -33,10 +28,10 @@ test:
 
 about:
   home: https://github.com/PyYoshi/cChardet
-  license_file: {{ RECIPE_DIR }}/COPYING
+  license_file: COPYING
   license: MPL 1.1
   license_family: OTHER
-  summary: 'cChardet is high speed universal character encoding detector.'
+  summary: 'cChardet is high speed universal character encoding detector'
   dev_url: https://github.com/PyYoshi/cChardet
   doc_url: https://github.com/PyYoshi/cChardet
 
