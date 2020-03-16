@@ -1,4 +1,4 @@
-{% set version = "2.1.5" %}
+{% set version = "2.1.6" %}
 
 package:
   name: cchardet
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cchardet/cchardet-{{ version }}.tar.gz
-  sha256: 240efe3f255f916769458343840b9c6403cf3192720bc5129792cbcb88bf72fb
+  sha256: b76afb2059ad69eab576949980a17413c1e9e5a5624abf9e43542d8853f146b3
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   build:
@@ -31,7 +31,7 @@ about:
   license_file: COPYING
   license: MPL 1.1
   license_family: OTHER
-  summary: 'cChardet is high speed universal character encoding detector'
+  summary: cChardet is high speed universal character encoding detector
   dev_url: https://github.com/PyYoshi/cChardet
   doc_url: https://github.com/PyYoshi/cChardet
 
