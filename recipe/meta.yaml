@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/c/cchardet/cchardet-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/c/cchardet/cchardet-{{ version }}.tar.gz
   sha256: c428b6336545053c2589f6caf24ea32276c6664cb86db817e03a94c60afa0eaf
 
 build:
-  number: 6
+  number: 7
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
