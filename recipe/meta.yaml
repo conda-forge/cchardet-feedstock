@@ -1,15 +1,15 @@
-{% set version = "2.1.7" %}
+{% set version = "2.4.1" %}
 
 package:
   name: cchardet
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/c/cchardet/cchardet-{{ version }}.tar.gz
-  sha256: c428b6336545053c2589f6caf24ea32276c6664cb86db817e03a94c60afa0eaf
+  url: https://files.pythonhosted.org/packages/source/c/cchardet/cchardet-{{ version }}.tar.gz
+  sha256: 3e3b0b9f11f24b66dc34997035e4d9c570594277e59c878ef004f666b3f45124
 
 build:
-  number: 6
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
